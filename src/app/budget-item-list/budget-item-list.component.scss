@@ -1,0 +1,90 @@
+@import "/src/main-styles.scss";
+
+.budget-items-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+
+    .budget-items-container {
+        display: flex;
+        column-gap: 50px;
+        width: 100%;
+        max-width: 680px;
+        height: 100%;
+        padding: 20px;
+    }
+
+    .income-column,
+    .expenses-column {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 0;
+        flex-grow: 1;
+
+        h3 {
+            margin-bottom: 20px;
+            font-family: "Lato";
+            font-size: 24px;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+    }
+
+    .income-column {
+        h3 {
+            color: $green;
+        }
+    }
+
+    .expenses-column {
+        h3 {
+            text-align: right;
+            color: $red;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .budget-items-section {
+        .budget-items-container {
+            padding: 0 20px;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .budget-items-section {
+        .budget-items-container {
+            padding: 0;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .budget-items-section {
+        .budget-items-container {
+            flex-direction: column;
+            row-gap: 20px;
+            padding: 0 20px;
+        }
+
+        .income-column {
+            margin-right: 0;
+        }
+
+        .expenses-column {
+            h3 {
+                text-align: left;
+            }
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .budget-items-section {
+        .budget-items-container {
+            padding: 0;
+        }
+    }
+}

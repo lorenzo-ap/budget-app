@@ -1,0 +1,114 @@
+@import "/src/main-styles.scss";
+
+.root {
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+
+    &:hover {
+        .x-icon-button {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    .x-icon-button {
+        position: absolute;
+        top: -13px;
+        right: -13px;
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+
+        background-image: url("../../../assets/delete_icon.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: $dark;
+
+        cursor: pointer;
+        opacity: 0;
+        transform: scale(0);
+        transition: transform 0.4s ease, opacity 0.4s ease;
+
+        &:hover {
+            opacity: 0.9;
+            transform: scale(1.1);
+        }
+    }
+}
+
+.budget-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: $light-gray;
+    cursor: pointer;
+    transition: background-color 0.4s ease;
+
+    &:hover {
+        background-color: darken($light-gray, 3%);
+    }
+
+    .description {
+        flex-grow: 1;
+        font-size: 18px;
+    }
+
+    .amount {
+        padding: 5px 10px;
+        border-radius: 3px;
+    }
+}
+
+.income {
+    color: $green;
+
+    .description {
+        margin-left: 5px;
+    }
+
+    .amount {
+        background-color: $light-green;
+    }
+}
+
+.expense {
+    color: $red;
+
+    .description {
+        order: 1;
+        margin-right: 5px;
+        text-align: right;
+    }
+
+    .amount {
+        background-color: $light-red;
+    }
+}
+
+@media (max-width: 768px) {
+    .root {
+        .x-icon-button {
+            opacity: 0.85;
+            transform: none;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .budget-item {
+        padding: 10px 15px;
+    }
+
+    .expense {
+        .description {
+            order: 0;
+            margin-right: 0;
+            margin-left: 5px;
+            text-align: left;
+        }
+    }
+}

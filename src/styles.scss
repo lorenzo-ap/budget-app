@@ -1,1 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+@import "main-styles";
+@import "bulma";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+html {
+    overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+::-webkit-scrollbar-thumb:active {
+    background-color: rgba(0, 0, 0, 0.5);
+}
