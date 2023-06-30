@@ -92,8 +92,7 @@
 @media (max-width: 768px) {
     .root {
         .x-icon-button {
-            opacity: 0.85;
-            transform: none;
+            display: none;
         }
     }
 }

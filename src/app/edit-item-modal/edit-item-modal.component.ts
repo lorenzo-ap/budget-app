@@ -17,4 +17,8 @@ export class EditItemModalComponent {
     onSubmitted(updatedItem: BudgetItem): void {
         this.dialogRef.close(updatedItem);
     }
+
+    onRemoveClick() {
+        this.dialogRef.close(new BudgetItem('', null));
+    }
 }

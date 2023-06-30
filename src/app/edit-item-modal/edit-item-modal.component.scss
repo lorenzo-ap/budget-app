@@ -1,8 +1,24 @@
 .wrapper {
-    padding: 20px;
+    padding: 30px 20px 20px;
 
     .title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         margin-bottom: 10px;
+        padding: 0 20px;
+    }
+
+    .button {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        .button {
+            display: block;
+        }
     }
 }
 

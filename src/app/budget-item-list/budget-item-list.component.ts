@@ -27,7 +27,9 @@ export class BudgetItemListComponent {
         });
 
         dialogRef.afterClosed().subscribe((result) => {
-            if (result) {
+            if (result?.amount === null) {
+                this.deleteItemEvent.emit(item);
+            } else if (result) {
                 this.updateItemEvent.emit({
                     oldItem: item,
                     newItem: result,
